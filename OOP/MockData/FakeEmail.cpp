@@ -48,40 +48,18 @@ string FakeEmail::next(string fullName)
     stringstream ss;
     string firstName, middleName, lastName;
 
-    int count = 0;
-    for (int i = 0; i < fullName.length(); i++)
-    {
-        if (fullName[i] == ' ' || i == (fullName.length() - 1))
-        {
-            switch (count)
-            {
-            case 0:
-                firstName = fullName.substr(0, i);
-                firstName = UTF8ToASCII(firstName);
-                count++;
-                break;
-            case 1:
-                middleName = fullName.substr(firstName.length() + 2, i - firstName.length() - 2);
-                middleName = UTF8ToASCII(middleName);
-                count++;
-                break;
-            case 2:
-                lastName = fullName.substr(firstName.length() + middleName.length() + 5, i - firstName.length() - middleName.length() - 3);
-                lastName = UTF8ToASCII(lastName);
-                count++;
-                break;
-            default:
-                break;
-            }
-        }
-    }
+    // Split full name into first name, middle name and last name
+    ss << fullName;
+    ss >> firstName >> middleName >> lastName;
+    firstName = UTF8ToASCII(firstName);
+    middleName = UTF8ToASCII(middleName);
+    lastName = UTF8ToASCII(lastName);
 
-    ss << (char)(firstName[0] + 32) << (char)(middleName[0] + 32);
-    for (int i = 0; i < lastName.length(); i++)
-    {
-        ss << (char)(lastName[i + 1] + 32);
-    }
-    ss << '@' << email;
+    transform(firstName.begin(), firstName.end(), firstName.begin(), ::tolower);
+    transform(middleName.begin(), middleName.end(), middleName.begin(), ::tolower);
+    transform(lastName.begin(), lastName.end(), lastName.begin(), ::tolower);
+    stringstream emailSS;
+    emailSS << firstName[0] << middleName[0] << lastName << '@' << email;
 
-    return ss.str();
+    return emailSS.str();
 }

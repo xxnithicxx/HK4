@@ -9,7 +9,11 @@ private:
     int _num;
     int _frac;
     inline static shared_ptr<FakeGPA> _instance = nullptr;
-    FakeGPA();
+    FakeGPA()
+    {
+        _num = 0;
+        _frac = 0;
+    }
 
 public:
     static shared_ptr<FakeGPA> instance()
