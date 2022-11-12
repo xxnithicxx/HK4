@@ -23,7 +23,6 @@ private:
 public:
     static std::shared_ptr<FakeAddress> instance()
     {
-
         if (_instance == nullptr)
         {
             FakeAddress *temp = new FakeAddress();

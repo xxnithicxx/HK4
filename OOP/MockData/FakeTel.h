@@ -14,7 +14,6 @@ private:
 public:
     static shared_ptr<FakeTel> instance()
     {
-        static shared_ptr<FakeTel> _instance = nullptr;
         if (_instance == nullptr)
         {
             FakeTel *temp = new FakeTel();

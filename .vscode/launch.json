@@ -5,20 +5,6 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "java",
-            "name": "Launch Popup",
-            "request": "launch",
-            "mainClass": "Popup",
-            "projectName": "HK3_b2bdcae6"
-        },
-        {
-            "type": "java",
-            "name": "Launch Main Java Project",
-            "request": "launch",
-            "mainClass": "Main",
-            "projectName": "HK3_b2bdcae6"
-        },
-        {
             "name": "Python: Current File",
             "type": "python",
             "request": "launch",

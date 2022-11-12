@@ -19,7 +19,6 @@ private:
 public:
     static shared_ptr<FakeDoB> instance()
     {
-        static shared_ptr<FakeDoB> _instance = nullptr;
         if (_instance == nullptr)
         {
             FakeDoB *temp = new FakeDoB();

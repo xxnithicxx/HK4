@@ -26,7 +26,7 @@ string FakeEmail::UTF8ToASCII(string name)
     wregex charO(L"[òóỏọõôồốổộỗơờớởợỡÒÓỎỌÕÔỒỐỔỘỖƠỜỚỞỢỠ]");
     wregex charU(L"[ùúủụũưừứửựữÙÚỦỤŨƯỪỨỬỰỮ]");
     wregex charY(L"[ỳýỷỵỹỲÝỶỴỸ]");
-    wregex charD(L"[đĐ]");
+    wregex charD(L"đ|Đ");
 
     wstr = regex_replace(wstr, charA, L"a");
     wstr = regex_replace(wstr, charE, L"e");

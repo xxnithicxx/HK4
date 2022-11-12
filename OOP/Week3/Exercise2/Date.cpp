@@ -248,7 +248,12 @@ ostream &operator<<(ostream &out, const Date &date)
 
 istream &operator>>(istream &in, Date &date)
 {
-    in >> date._day >> date._month >> date._year;
+    cout << "Enter day: ";
+    in >> date._day;
+    cout << "Enter month: ";
+    in >> date._month;
+    cout << "Enter year: ";
+    in >> date._year;
     return in;
 }
 

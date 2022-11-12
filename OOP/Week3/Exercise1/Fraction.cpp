@@ -110,7 +110,7 @@ Fraction operator-(const int& num, const Fraction& other)
 Fraction operator-(const Fraction& other, const int& num)
 {
     Fraction result;
-    result._numerator = num * other._denominator - other._numerator;
+    result._numerator = other._numerator -num * other._denominator;
     result._denominator = other._denominator;
     result.simplify();
     return result;
@@ -160,8 +160,8 @@ Fraction operator/(const Fraction& other, const int& num)
     }
     else
     {
-        result._numerator = num * other._denominator;
-        result._denominator = other._numerator;
+        result._numerator = other._numerator;
+        result._denominator = num * other._denominator;
         result.simplify();
     }
 

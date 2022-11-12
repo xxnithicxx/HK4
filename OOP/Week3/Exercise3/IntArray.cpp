@@ -81,6 +81,7 @@ ostream &operator<<(ostream &os, const IntArray &arr)
 
 istream &operator>>(istream &is, IntArray &arr)
 {
+    ~IntArray();
     cout << "Enter capacity: ";
     is >> arr._capacity;
 
