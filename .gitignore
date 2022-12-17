@@ -1,2 +1,9 @@
-
+.parcel_cache
+node_modules
+package-lock.json
+yarn.lock
+Bunny\assets
 *.json
+Cpp17/c17-in-detailpdf.pdf
+JavaScript/.parcel-cache/*
+*.exe

@@ -1,0 +1,14 @@
+RegularTicket,film2,05:00,room6,130000,210000
+RegularTicket,film1,10:00,room1,100000,180000
+RegularTicket,film3,20:00,room7,50000,130000
+RegularTicket,film7,18:00,room4,50000,130000
+RegularTicket,film6,15:00,room3,40000,120000
+RegularTicket,film5,12:00,room2,30000,110000
+RegularTicket,film4,08:00,room1,20000,100000
+ComboTicket,film14,10:00,room4,120000,216000
+ComboTicket,film13,13:00,room3,110000,208000
+ComboTicket,film12,16:00,room2,100000,200000
+ComboTicket,film11,19:00,room1,90000,192000
+ComboTicket,film10,22:00,room7,80000,184000
+ComboTicket,film9,23:00,room6,70000,176000
+ComboTicket,film8,21:00,room5,60000,168000
